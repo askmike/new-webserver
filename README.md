@@ -1,6 +1,6 @@
 # New webserver
 
-Scripts and config files to quickly start a new webserver that has.
+Scripts and config files to quickly start a new webserver that has:
 
 - ufw
 - letsenscrypt ssl
@@ -13,9 +13,9 @@ Assumes you are logged in as root.
 
     ufw default deny incoming
     ufw default allow outgoing
-    ufw allow 22 # ssh
+    ufw allow 22  # ssh
     ufw allow 443 # https
-    ufw allow 80 # http
+    ufw allow 80  # http
     ufw enable
 
 # Letsencrypt
@@ -25,7 +25,7 @@ Assumes you are logged in as root.
     wget https://github.com/xenolf/lego/releases/download/v0.4.1/lego_linux_amd64.tar.xz
     tar -xf lego_linux_amd64.tar.xz
     mv lego_linux_amd64 lego
-    lego/lego --email="EMAIL" --domains="DOMAIN" -a run
+    ./lego --email="EMAIL" --domains="DOMAIN" -a run
 
 # Diffie-Hellman
 
