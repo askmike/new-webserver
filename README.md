@@ -35,7 +35,7 @@ Assumes you are logged in as root.
 
     apt-get install nginx # todo: nginx official repo
     cd /etc/nginx/
-    wget https://raw.githubusercontent.com/askmike/new-webserver/master/nginx.conf
+    wget https://raw.githubusercontent.com/askmike/new-webserver/master/site.conf
     # edit nginx conf with your site and api
     service nginx configtest
     service nginx restart
