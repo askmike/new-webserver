@@ -3,7 +3,7 @@
 Scripts and config files to quickly start a new webserver that has:
 
 - ufw
-- letsenscrypt ssl
+- letsenscrypt ssl cert
 - Diffie-Hellman parameters
 - nginx with ssl properly configured
 
@@ -27,13 +27,10 @@ Assumes you are logged in as root.
     mv lego_linux_amd64 lego
     ./lego --email="EMAIL" --domains="DOMAIN" -a run
 
-# Diffie-Hellman
-
-    openssl dhparam -out /etc/nginx/dhparam.pem 2048
-
 # Nginx
 
     apt-get install nginx # todo: nginx official repo
+    openssl dhparam -out /etc/nginx/dhparam.pem 2048 # Diffie-Hellman parameters
     cd /etc/nginx/conf.d
     wget https://raw.githubusercontent.com/askmike/new-webserver/master/site.conf
     # edit nginx conf with your site and api
