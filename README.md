@@ -36,3 +36,10 @@ Assumes you are logged in as root.
     # edit nginx conf with your site and api
     service nginx configtest
     service nginx restart
+    
+
+# nodejs
+
+    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+    # follow instructions in terminal
+    nvm install 10
