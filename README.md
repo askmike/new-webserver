@@ -22,9 +22,8 @@ Assumes you are logged in as root.
 
     mkdir /lego
     cd /lego
-    wget https://github.com/xenolf/lego/releases/download/v1.0.1/lego_linux_amd64.tar.xz
-    tar -xf lego_linux_amd64.tar.xz
-    mv lego_linux_amd64 lego
+    wget https://github.com/xenolf/lego/releases/download/v1.0.1/lego_v1.0.1_linux_amd64.tar.gz
+    tar -xf lego_v1.0.1_linux_amd64.tar.gz
     ./lego --email="EMAIL" --domains="DOMAIN" -a run
 
 # Nginx
