@@ -16,6 +16,8 @@ Assumes you are logged in as root.
     ufw allow 22  # ssh
     ufw allow 443 # https
     ufw allow 80  # http
+    # allow port to specific IP
+    # ufw allow from 1.1.1.1 to any port 22
     ufw enable
 
 # Letsencrypt
