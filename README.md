@@ -24,8 +24,8 @@ Assumes you are logged in as root.
 
     mkdir /lego
     cd /lego
-    wget https://github.com/xenolf/lego/releases/download/v1.0.1/lego_v1.0.1_linux_amd64.tar.gz
-    tar -xf lego_v1.0.1_linux_amd64.tar.gz
+    wget https://github.com/xenolf/lego/releases/download/v1.1.0/lego_v1.1.0_linux_amd64.tar.gz
+    tar -xf lego_v1.1.0_linux_amd64.tar.gz
     ./lego --email="EMAIL" --domains="DOMAIN" -a run
 
 # Nginx
@@ -38,7 +38,6 @@ Assumes you are logged in as root.
     service nginx configtest
     service nginx restart
     
-
 # nodejs
 
     curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
