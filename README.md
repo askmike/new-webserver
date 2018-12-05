@@ -24,8 +24,9 @@ Assumes you are logged in as root.
 
     mkdir /lego
     cd /lego
-    wget https://github.com/xenolf/lego/releases/download/v1.1.0/lego_v1.1.0_linux_amd64.tar.gz
-    tar -xf lego_v1.1.0_linux_amd64.tar.gz
+    wget https://github.com/xenolf/lego/releases/download/v1.2.1/lego_v1.2.1_linux_amd64.tar.gz
+    tar -xf lego_v1.2.1_linux_amd64.tar.gz
+    rm lego_v1.2.1_linux_amd64.tar.gz
     ./lego --email="EMAIL" --domains="DOMAIN" -a run
 
 # Nginx
@@ -42,4 +43,8 @@ Assumes you are logged in as root.
 
     curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
     # follow instructions in terminal
-    nvm install 10
+    nvm install 11.1
+
+# Build tools
+
+    apt-get install python python3 make build-essential
