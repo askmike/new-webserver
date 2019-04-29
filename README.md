@@ -26,9 +26,9 @@ Assumes you are logged in as root.
 
     mkdir /lego
     cd /lego
-    wget https://github.com/xenolf/lego/releases/download/v1.2.1/lego_v1.2.1_linux_amd64.tar.gz
-    tar -xf lego_v1.2.1_linux_amd64.tar.gz
-    rm lego_v1.2.1_linux_amd64.tar.gz
+    wget https://github.com/go-acme/lego/releases/download/v2.5.0/lego_v2.5.0_linux_amd64.tar.gz
+    tar -xf lego_v2.5.0_linux_amd64.tar.gz
+    rm lego_v2.5.0_linux_amd64.tar.gz CHANGELOG.md LICENSE
     ./lego --email="EMAIL" --domains="DOMAIN" -a run
     # OR if nginx is already running:
     # ./lego --email="EMAIL" --domains="DOMAIN" -a run --webroot="/var/path-to-site"
