@@ -49,7 +49,7 @@ Assumes you are logged in as root.
 
     curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
     # follow instructions in terminal
-    nvm install 12.10
+    nvm install 13.2
 
 # Build tools
 
