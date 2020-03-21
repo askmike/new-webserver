@@ -47,9 +47,9 @@ Assumes you are logged in as root.
     
 # nodejs
 
-    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
     # follow instructions in terminal
-    nvm install 13.2
+    nvm install 13.11
 
 # Build tools
 
