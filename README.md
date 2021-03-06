@@ -11,6 +11,14 @@ Scripts and config files to quickly start a new webserver that has:
 
 Assumes you are logged in as root.
 
+# nodejs
+
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+    nvm install 15.11.0
+
 # UFW
 
     ufw default deny incoming
@@ -44,14 +52,6 @@ Assumes you are logged in as root.
     # edit nginx conf with your site and api
     service nginx configtest
     service nginx restart
-    
-# nodejs
-
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
-    export NVM_DIR="$HOME/.nvm"
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-    nvm install 15.8.0
 
 # Build tools
 
