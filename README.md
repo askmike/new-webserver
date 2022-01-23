@@ -32,17 +32,6 @@ Assumes you are logged in as root.
     # ufw allow in on eth0 to any port 80
     ufw enable
 
-# Letsencrypt
-
-    mkdir /lego
-    cd /lego
-    wget https://github.com/go-acme/lego/releases/download/v2.5.0/lego_v2.5.0_linux_amd64.tar.gz
-    tar -xf lego_v2.5.0_linux_amd64.tar.gz
-    rm lego_v2.5.0_linux_amd64.tar.gz CHANGELOG.md LICENSE
-    ./lego --email="EMAIL" --domains="DOMAIN" -a run
-    # OR if nginx is already running:
-    # ./lego --email="EMAIL" --domains="DOMAIN" -a run --webroot="/var/path-to-site"
-
 # Nginx
 
     apt-get install nginx # todo: nginx official repo
@@ -52,6 +41,31 @@ Assumes you are logged in as root.
     # edit nginx conf with your site and api
     service nginx configtest
     service nginx restart
+
+# Nginx /w certbot
+
+    apt-get update
+    apt-get install nginx certbot python-certbot-nginx
+    openssl dhparam -out /etc/nginx/dhparam.pem 2048 # Diffie-Hellman parameters
+    cd /etc/nginx/conf.d
+    wget https://raw.githubusercontent.com/askmike/new-webserver/master/csite.conf
+    # edit nginx conf with your domain
+    service nginx configtest
+    service nginx restart
+    sudo certbot --nginx -d domain
+    [email]
+    a
+    y
+    2
+    wget https://raw.githubusercontent.com/askmike/new-webserver/master/csite2.conf
+    rm csite.conf
+    mv csite2.conf site.conf
+    # edit nginx conf with your site and api
+    service nginx configtest
+    service nginx restart
+    crontab -e
+    # add txt:
+    0 12 * * * /usr/bin/certbot renew --quiet
 
 # Build tools
 
