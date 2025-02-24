@@ -44,26 +44,25 @@ Assumes you are logged in as root.
 
 # Nginx /w certbot
 
-    apt-get update
-    apt-get install nginx certbot python-certbot-nginx
-    openssl dhparam -out /etc/nginx/dhparam.pem 2048 # Diffie-Hellman parameters
+    sudo apt-get update
+    sudo apt-get install -y nginx certbot python3-certbot-nginx
+    sudo openssl dhparam -out /etc/nginx/dhparam.pem 2048 # Diffie-Hellman parameters
     cd /etc/nginx/conf.d
-    wget https://raw.githubusercontent.com/askmike/new-webserver/master/csite.conf
+    sudo wget https://raw.githubusercontent.com/askmike/new-webserver/master/csite.conf
     # edit nginx conf with your domain
-    service nginx configtest
-    service nginx restart
+    sudo service nginx configtest
+    sudo service nginx restart
     sudo certbot --nginx -d domain
     [email]
-    a
     y
-    2
+    n
     wget https://raw.githubusercontent.com/askmike/new-webserver/master/csite2.conf
-    rm csite.conf
-    mv csite2.conf site.conf
+    sudo rm csite.conf
+    sudo mv csite2.conf site.conf
     # edit nginx conf with your site and api
-    service nginx configtest
-    service nginx restart
-    crontab -e
+    sudo service nginx configtest
+    sudo service nginx restart
+    sudo crontab -e
     # add txt:
     0 12 * * * /usr/bin/certbot renew --quiet
 
